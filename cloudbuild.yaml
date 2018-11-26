@@ -1,11 +1,7 @@
 steps:
 # Clone the funretro repo
 - name: 'gcr.io/cloud-builders/git'
-  args: [ 'clone', 'https://github.com/chodges15/distributed.git']
-
-# Checkout the docker branch (development)
-- name: 'gcr.io/cloud-builders/git'
-  args: [ 'checkout', 'docker']
+  args: [ 'clone', '-b', 'docker', 'https://github.com/chodges15/distributed.git']
 
 # Build the firebase-tools
 - name: 'gcr.io/cloud-builders/docker'
